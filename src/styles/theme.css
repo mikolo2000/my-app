@@ -18,7 +18,8 @@
 
 body {
   background-color: var(--bg);
+  box-sizing: border-box;
   color: var(--text-primary);
   transition: background-color 0.3s, color 0.3s;
-  font-size: 14px;
+  font-size: 10px;
 }
