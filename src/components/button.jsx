@@ -1,7 +1,7 @@
-function Button(props) {
+function Button({ type, onClick, name }) {
   return (
-    <button type={props.type} className="mainButtons">
-      {props.name}
+    <button type={type} className="mainButtons" onClick={onClick}>
+      {name}
     </button>
   );
 }

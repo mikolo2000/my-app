@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+body {
+  box-sizing: border-box;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -102,6 +105,7 @@ a {
   padding: 10px 17px;
   color: var(--accent);
   cursor: pointer;
+  font-size: 12px;
 }
 
 .paymentCard {
@@ -183,11 +187,10 @@ a {
   width: 100%;
   background-color: var(--surface);
   border: 1px;
-  padding: 15px 20px;
+  padding: 15px 0px;
   color: var(--text-primary);
   display: flex;
   justify-content: space-around;
-  text-align: center;
 
   .elementCard {
     width: 50px;
@@ -210,6 +213,60 @@ a {
       padding: 10px;
       border-radius: 20px;
       text-align: center;
+    }
+  }
+}
+
+.listContainer {
+  background-color: var(--surface);
+  width: 94%;
+  margin: auto;
+  border-radius: 10px;
+  Button {
+    background-color: var(--accent);
+    color: var(--bg);
+    padding: 5px 17px;
+    margin-left: 3px;
+    flex-shrink: 0;
+  }
+
+  .listItems {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .listImage {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icons {
+        font-size: 18px;
+      }
+    }
+
+    .listTexts {
+      padding-left: 10px;
+      flex-grow: 1;
+
+      .majorText {
+        font-size: 12px;
+        margin-bottom: 0px;
+        .spanText {
+          color: var(--accent);
+        }
+      }
+      .minorText {
+        color: var(--text-secondary);
+        margin-top: 5px;
+      }
     }
   }
 }
