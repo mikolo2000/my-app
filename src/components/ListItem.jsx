@@ -5,13 +5,13 @@ const ListItem = ({
   minorText,
   spanText,
   button,
-  chevonRight,
+  styleS
 }) => {
   return (
     <>
       <div className="listContainer">
         <div className="listItems">
-          <div className="listImage">{image || icon || "This is it"}</div>
+          <div className={styleS? `listImage ${styleS}` : "listImage"} >{ image? <img src={image} alt="" />: icon || "This is it"}</div>
           <div className="listTexts">
             <p className="majorText">
               {majorText || " i don't like what i am seeing"}
@@ -22,7 +22,7 @@ const ListItem = ({
                 "instant Access to Christmass Travel card- Apply by Jan 31, 2026"}
             </p>
           </div>
-          <div className="listButton">{button || chevonRight || ""}</div>
+          <div className="listButton">{button || ""}</div>
         </div>
       </div>
     </>
