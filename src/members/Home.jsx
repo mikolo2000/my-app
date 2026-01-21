@@ -6,8 +6,10 @@ import PaymentCard from "../components/PaymentCard";
 import SalesItem from "../components/SalesItem";
 import InputText from "../components/InputText";
 import ThemeButton from "../components/themeButton";
+import Slider from "../components/MovingElement";
 import "../styles/App.css";
 import { FaChevronRight, FaImage } from "react-icons/fa";
+import Slider2 from "../components/Slider2";
 function Home() {
   return (
     <>
@@ -18,7 +20,7 @@ function Home() {
           minorText="Jan 20th, 03:20:23"
           spanText=" "
           icon={<FaImage className="icons" />}
-          button={<FaChevronRight className="icons chevron" size={14}/>}
+          button={<FaChevronRight className="icons chevron" size={14} />}
           styleS="circle"
         />
         <ListItem
@@ -26,7 +28,7 @@ function Home() {
           minorText="Jan 20th, 03:20:23"
           spanText=" "
           icon={<FaImage className="icons" />}
-          button={<FaChevronRight className="icons chevron" size={14}/>}
+          button={<FaChevronRight className="icons chevron" size={14} />}
           styleS="circle"
         />
         <PaymentCard />
@@ -37,17 +39,21 @@ function Home() {
         />
         <ListItem
           icon={<FaImage className="icons" />}
-          button={<FaChevronRight className="icons chevron" size={14}/>}
+          button={<FaChevronRight className="icons chevron" size={14} />}
         />
+        <div className="before">
+          <Slider />
+          <Slider2 />
+        </div>
 
         <Button name="mikolo" />
-      <InputText
-        type="email"
-        onChange={(val) => {
-          console.log(val);
-        }}
-      />
-      <ThemeButton />
+        <InputText
+          type="email"
+          onChange={(val) => {
+            console.log(val);
+          }}
+        />
+        <ThemeButton />
       </section>
       <section className="theFoot">
         <Footer />

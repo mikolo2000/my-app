@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "majorText": "Awoof wey No dey run Belle!!!",
+      "minorText": "Get 10% off when you deposite ₦300 only",
+      "spanText": " "
+    },
+    {
+      "id": 2,
+      "majorText": "Super Voucher Pack",
+      "minorText": "Get 15 discount coupons (worth ₦530 total) for just ₦99, valid for bill payment ",
+      "spanText": " "
+    },
+    {
+      "id": 1,
+      "majorText": "Element 3",
+      "minorText": "Element 3",
+      "spanText": "Element 3"
+    }
+  ]
+}

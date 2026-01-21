@@ -258,7 +258,7 @@ a {
       }
     }
 
-    .circle{
+    .circle {
       width: 40px;
       height: 40px;
       flex-shrink: 0;
@@ -295,5 +295,46 @@ a {
   .listButton {
     flex-shrink: 0;
     cursor: pointer;
+  }
+}
+
+.slider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  .slider-item {
+    position: inherit;
+
+    .listItems {
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+}
+.sliderContainer {
+  width: 95%;
+  margin: auto;
+  border-radius: 20px;
+  .beforeSlider {
+    padding: 10px 20px;
+
+    border-bottom: 1px dotted var(--text-secondary);
+  }
+
+  background: linear-gradient(
+    to Right,
+    rgb(2, 27, 82),
+    rgb(3, 63, 104),
+    rgb(2, 58, 104),
+    rgb(4, 68, 44),
+    rgb(7, 97, 34),
+    rgb(100, 194, 12)
+  );
+  .listContainer {
+    background-color: transparent;
+    padding: 0px;
+
+    .listItems {
+      padding-top: 0px;
+    }
   }
 }
