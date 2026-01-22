@@ -65,21 +65,19 @@ const Slider2 = () => {
   const currentItem = items[index];
   return (
     <>
-      <div className="sliderContainer">
-        <p className="beforeSlider">You may also like</p>
-        <div
-          className="slider"
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-          onMouseDown={handleMouseDown}
-          onMouseUp={handleMouseUp}
-        >
-          <ListItem
-            majorText={currentItem.majorText}
-            minorText={currentItem.minorText}
-            spanText={currentItem.spanText}
-          />
-        </div>
+      <p className="beforeSlider">You may also like</p>
+      <div
+        className="slider"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+      >
+        <ListItem
+          majorText={currentItem.majorText}
+          minorText={currentItem.minorText}
+          spanText={currentItem.spanText}
+        />
       </div>
     </>
   );

@@ -1,49 +1,23 @@
 import Button from "../components/button";
+import Footer from "../components/footer";
 import FrontCard from "../components/FrontCard";
 import ListItem from "../components/ListItem";
 import PaymentCard from "../components/PaymentCard";
 import SalesItem from "../components/SalesItem";
 import InputText from "../components/InputText";
-import ThemeButton from "../components/themeButton";
 import Slider from "../components/MovingElement";
 import "../styles/App.css";
-import {
-  FaChevronRight,
-  FaImage,
-  FaHeadset,
-  FaBell,
-  FaCamera,
-} from "react-icons/fa";
+import { FaChevronRight, FaImage } from "react-icons/fa";
 import Slider2 from "../components/Slider2";
-function Home() {
+function Finance() {
   return (
     <>
       <section className="main">
-        <div className="introBar">
-          <div className="introBarName">
-            <div className="introImage">
-              <img src="" alt="" />
-            </div>
-            <h2>Hi, Cornelius</h2>
-          </div>
-          <div className="navContainer">
-            <div className="headIcons">
-              <p>HELP</p>
-              <FaHeadset className="icons" />
-            </div>
-            <div className="headIcons">
-              <FaCamera className="icons" />
-            </div>
-            <div className="headIcons">
-              <p className="notification">59</p>
-              <FaBell className="icons" />
-            </div>
-          </div>
-        </div>
+        <h1>Finance</h1>
         <FrontCard />
         <div className="listContainer">
           <ListItem
-            majorText="OWealth Interest Earned"
+            majorText="Finance"
             minorText="Jan 20th, 03:20:23"
             spanText=" "
             icon={<FaImage className="icons" />}
@@ -51,8 +25,8 @@ function Home() {
             styleS="circle"
           />
           <ListItem
-            majorText="OWealth Interest Earned"
-            minorText="Jan 20th, 03:20:23"
+            majorText="Finance"
+            minorText="Jan 27th, 03:20:23"
             spanText=" "
             icon={<FaImage className="icons" />}
             button={<FaChevronRight className="icons chevron" size={14} />}
@@ -88,10 +62,12 @@ function Home() {
             console.log(val);
           }}
         />
-        <ThemeButton />
+      </section>
+      <section className="theFoot">
+        <Footer />
       </section>
     </>
   );
 }
 
-export default Home;
+export default Finance;

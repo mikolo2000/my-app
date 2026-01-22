@@ -66,23 +66,33 @@ const Slider = () => {
   };
 
   if (!items.length) return null;
-  const currentItem = items[index];
+
   return (
     <>
       <div
         className="slider"
+        style={{ transform: `translateX(-${index * 100}%)` }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
       >
-        <div className={`slider-item ${direction}`}>
-          <ListItem
-            cla
-            majorText={currentItem.majorText}
-            minorText={currentItem.minorText}
-            spanText={currentItem.spanText}
-          />
+        {items.map((item, i) => (
+          <div key={i} className={`slider-item ${direction}`}>
+            <ListItem
+              majorText={item.majorText}
+              minorText={item.minorText}
+              spanText={item.spanText}
+            />
+          </div>
+        ))}
+        <div className="slider-idicator">
+          {items.map((_, i) => (
+            <span
+              key={i}
+              className={`indicator ${i === index ? "active" : ""}`}
+            ></span>
+          ))}
         </div>
       </div>
     </>

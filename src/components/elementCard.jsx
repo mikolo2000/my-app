@@ -1,7 +1,7 @@
-const ElementCard = ({ icon, label }) => {
+const ElementCard = ({ icon, label, onClick }) => {
   return (
     <>
-      <div className="elementCard">
+      <div className="elementCard" onClick={onClick}>
         <div className="eleContainer">{icon}</div>
         <p>{label}</p>
       </div>
