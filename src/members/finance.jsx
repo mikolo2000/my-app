@@ -65,13 +65,17 @@ function Finance() {
               </td>
             </tr>
           </tbody>
-          <div className="iconCont">
-            {isExpanded ? (
-              <FaChevronDown className="expandIcon" onClick={toggle} />
-            ) : (
-              <FaChevronUp className="expandIcon" onClick={toggle} />
-            )}
-          </div>
+          <tfoot>
+            <tr>
+              <td colSpan="3" className="iconCont">
+                {isExpanded ? (
+                  <FaChevronDown className="expandIcon" onClick={toggle} />
+                ) : (
+                  <FaChevronUp className="expandIcon" onClick={toggle} />
+                )}
+              </td>
+            </tr>
+          </tfoot>
         </table>
       </section>
     </>
